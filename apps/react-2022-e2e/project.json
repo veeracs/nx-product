@@ -1,0 +1,28 @@
+{
+  "root": "apps/react-2022-e2e",
+  "sourceRoot": "apps/react-2022-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/react-2022-e2e/cypress.json",
+        "devServerTarget": "react-2022:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "react-2022:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/react-2022-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["react-2022"]
+}

@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "react-2022": "apps/react-2022",
+    "react-2022-e2e": "apps/react-2022-e2e"
+  }
+}
